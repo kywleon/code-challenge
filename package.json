@@ -1,0 +1,23 @@
+{
+  "name": "code-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test:problem4": "npx ts-node src/problem4/run_tests.ts",
+    "test:problem5": "ts-node-dev src/problem5/server.ts"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^18.19.130",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1"
+  }
+}
