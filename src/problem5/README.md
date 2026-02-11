@@ -34,28 +34,32 @@ src/
 ## Installation
 
 1. **Clone / Navigate to the repository**:
+
 ```bash
 cd src/problem5
 ```
 
 2. **Install dependencies**:
+
 ```bash
 npm install
 ```
 
-   Dependencies include:
-   - `express` — Web framework
-   - `typeorm` — ORM for database
-   - `sqlite3` — SQLite driver
-   - `cors` — Cross-origin resource sharing
-   - `body-parser` — Middleware for parsing JSON
-   - `dotenv` — Environment variable management
-   - `reflect-metadata` — Decorators support for TypeORM
-   - `typescript`, `ts-node` — TypeScript support
+Dependencies include:
+
+- `express` — Web framework
+- `typeorm` — ORM for database
+- `sqlite3` — SQLite driver
+- `cors` — Cross-origin resource sharing
+- `body-parser` — Middleware for parsing JSON
+- `dotenv` — Environment variable management
+- `reflect-metadata` — Decorators support for TypeORM
+- `typescript`, `ts-node` — TypeScript support
 
 3. **Environment Setup** (Optional):
 
    Create a `.env` file in the repository root (if not already present):
+
    ```
    PORT=3000
    ```
@@ -93,6 +97,7 @@ Server running at http://localhost:3000
 ## API Endpoints
 
 ### Base URL
+
 ```
 http://localhost:3000/resources
 ```
@@ -100,6 +105,7 @@ http://localhost:3000/resources
 ### Endpoints
 
 #### 1. Create a Resource
+
 - **Method**: `POST`
 - **URL**: `/resources`
 - **Body**:
@@ -119,6 +125,7 @@ http://localhost:3000/resources
   ```
 
 #### 2. List All Resources
+
 - **Method**: `GET`
 - **URL**: `/resources`
 - **Query Parameters** (optional):
@@ -136,6 +143,7 @@ http://localhost:3000/resources
   ```
 
 #### 3. Get a Specific Resource
+
 - **Method**: `GET`
 - **URL**: `/resources/:id`
 - **Response** (200 OK):
@@ -154,6 +162,7 @@ http://localhost:3000/resources
   ```
 
 #### 4. Update a Resource
+
 - **Method**: `PUT`
 - **URL**: `/resources/:id`
 - **Body** (partial update allowed):
@@ -173,6 +182,7 @@ http://localhost:3000/resources
   ```
 
 #### 5. Delete a Resource
+
 - **Method**: `DELETE`
 - **URL**: `/resources/:id`
 - **Response** (200 OK):
@@ -187,6 +197,7 @@ http://localhost:3000/resources
 You can test the API using:
 
 - **cURL** (command line):
+
   ```bash
   curl -X GET http://localhost:3000/resources
   curl -X POST http://localhost:3000/resources \
@@ -209,19 +220,25 @@ You can test the API using:
 ## Troubleshooting
 
 ### Port Already in Use
+
 If port 3000 is already in use, set a different port in `.env`:
+
 ```
 PORT=3001
 ```
 
 ### Database Connection Error
+
 Ensure the application has write permissions in the directory (for SQLite database file creation).
 
 ### Module Not Found Error
+
 Run `npm install` to ensure all dependencies are installed.
 
 ### TypeScript Compilation Error
+
 Ensure TypeScript and ts-node are installed:
+
 ```bash
 npm install typescript ts-node --save-dev
 ```

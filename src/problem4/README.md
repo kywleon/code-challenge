@@ -42,6 +42,7 @@ export function sum_to_n_a(n: number): number {
 ```
 
 **Complexity Analysis**:
+
 - **Time**: O(|n|) — loops through |n| iterations
 - **Space**: O(1) — uses only a constant number of variables
 - **Pros**: Simple, easy to understand, no stack overflow risk
@@ -63,6 +64,7 @@ export function sum_to_n_b(n: number): number {
 ```
 
 **Complexity Analysis**:
+
 - **Time**: O(|n|) — recursion depth is |n|
 - **Space**: O(|n|) — call stack depth is |n|
 - **Pros**: Elegant code, demonstrates divide-and-conquer approach
@@ -84,9 +86,11 @@ export function sum_to_n_c(n: number): number {
 ```
 
 **Formula Derivation** (n ≥ 1):
-- Sum = 1 + 2 + ... + n = n*(n+1)/2
+
+- Sum = 1 + 2 + ... + n = n\*(n+1)/2
 
 **Complexity Analysis**:
+
 - **Time**: O(1) — constant time; direct formula calculation
 - **Space**: O(1) — uses only constant space
 - **Pros**: Most efficient; instant computation for any n
@@ -96,11 +100,11 @@ export function sum_to_n_c(n: number): number {
 
 ## Performance Comparison
 
-| Approach | Time Complexity | Space Complexity | Use Case |
-|----------|-----------------|------------------|----------|
-| a (Iterative) | O(\|n\|) | O(1) | Medium-sized n; good for learning |
-| b (Recursive) | O(\|n\|) | O(\|n\|) | Small n; demonstrates recursion |
-| c (Formula) | O(1) | O(1) | **Recommended for production** — any n |
+| Approach      | Time Complexity | Space Complexity | Use Case                               |
+| ------------- | --------------- | ---------------- | -------------------------------------- |
+| a (Iterative) | O(\|n\|)        | O(1)             | Medium-sized n; good for learning      |
+| b (Recursive) | O(\|n\|)        | O(\|n\|)         | Small n; demonstrates recursion        |
+| c (Formula)   | O(1)            | O(1)             | **Recommended for production** — any n |
 
 ---
 
