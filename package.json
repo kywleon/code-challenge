@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "test:problem4": "npx ts-node src/problem4/run_tests.ts",
-    "test:problem5": "ts-node-dev src/problem5/server.ts"
+    "test:problem5": "ts-node-dev src/problem5/src/server.ts"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -18,6 +18,9 @@
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.28"
   }
 }

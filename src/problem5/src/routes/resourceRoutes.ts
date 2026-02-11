@@ -5,7 +5,7 @@ import {
   getResource,
   updateResource,
   deleteResource
-} from "../controllers/resourceController";
+} from "../controllers/resourceController.ts";
 
 const router = Router();
 

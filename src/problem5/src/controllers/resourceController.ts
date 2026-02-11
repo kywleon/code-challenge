@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { Resource } from "../models/resource";
+import { Resource } from "../models/resource.ts";
 
-// Create resources
+// Create resource
 export const createResource = async (req: Request, res: Response) => {
   const { name, description } = req.body;
   try {
@@ -13,7 +13,7 @@ export const createResource = async (req: Request, res: Response) => {
   }
 };
 
-// Get the resource list, which can be easily filtered.
+// List resources with basic filters
 export const listResources = async (req: Request, res: Response) => {
   const { name } = req.query;
   try {
@@ -26,7 +26,7 @@ export const listResources = async (req: Request, res: Response) => {
   }
 };
 
-// Get resource details
+// Get details of a resource
 export const getResource = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {
@@ -38,7 +38,7 @@ export const getResource = async (req: Request, res: Response) => {
   }
 };
 
-// Update resources
+// Update resources details
 export const updateResource = async (req: Request, res: Response) => {
   const { id } = req.params;
   const { name, description } = req.body;

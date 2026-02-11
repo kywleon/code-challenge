@@ -1,28 +1,7 @@
-import "reflect-metadata";
-import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
-import { DataSource } from "typeorm";
-import resourceRoutes from "./routes/resourceRoutes";
-import { Resource } from "./models/resource";
-import dotenv from "dotenv";
+import app from "./app.ts";
 
-dotenv.config();
+const PORT = process.env.PORT || 3000;
 
-export const AppDataSource = new DataSource({
-  type: "sqlite",
-  database: "db.sqlite",
-  synchronize: true,
-  entities: [Resource],
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
-
-const app = express();
-app.use(cors());
-app.use(bodyParser.json());
-app.use("/resources", resourceRoutes);
-
-AppDataSource.initialize()
-  .then(() => console.log("Database connected"))
-  .catch((err) => console.error("DB init error:", err));
-
-export default app;

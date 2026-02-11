@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import { DataSource } from "typeorm";
-import resourceRoutes from "./routes/resourceRoutes";
-import { Resource } from "./models/resource";
+import resourceRoutes from "./routes/resourceRoutes.ts";
+import { Resource } from "./models/resource.ts";
 import dotenv from "dotenv";
 
 dotenv.config();

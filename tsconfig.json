@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ESNext",
+    // "module": "ESNext",
+    "module": "commonjs",  // 改成 commonjs
     "moduleResolution": "node",
     "types": ["node"],
     "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,    // TypeORM decorator 必须
+    "emitDecoratorMetadata": true      // TypeORM decorator 必须
   },
   "include": ["src/**/*"]
 }
